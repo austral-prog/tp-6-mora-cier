@@ -22,6 +22,35 @@ def add_elements(list_to_add_elements):
     list_to_add_elements.insert(0, "Pink")
     list_to_add_elements.append("Yellow")
     return list_to_add_elements
+def remove_elements(list_to_remove_elements):
+    len_elem = len(list_to_remove_elements)
+    
+    if len_elem >= 6 :
+        del list_to_remove_elements[4:6]
+        del list_to_remove_elements[0]
+        return list_to_remove_elements
+
+    elif len_elem == 5 :
+        del list_to_remove_elements[4]
+        del list_to_remove_elements[0]
+        return list_to_remove_elements
+
+    elif len_elem >= 1 and len_elem <= 5 :
+        del list_to_remove_elements[0]
+        del list_to_remove_elements[4:]
+        return list_to_remove_elements
+    
+    elif len_elem >= 1 and len_elem < 4 :
+        del list_to_remove_elements[0]
+    
+    elif len_elem < 1 :
+        return list_to_remove_elements
+
+
+def add_elements(list_to_add_elements):
+    list_to_add_elements.insert(0, "Pink")
+    list_to_add_elements.append("Yellow")
+    return list_to_add_elements
 
 
 def is_empty(list_to_check):
@@ -41,20 +70,26 @@ def check_lists(list_to_compare1, list_to_compare2):
 
 
 def list_of_lists(list_of_lists_to_modify):
-    sublist0 = list_of_lists_to_modify[0]
-    sublist1 = list_of_lists_to_modify[1]
-    sublist2 = list_of_lists_to_modify[2]
-    len_sublist0 = len(sublist0)
-    len_sublist1 = len(sublist1)
-    len_sublist2 = len(sublist2)
-    if len_sublist0 >= 0:
-        sublist0 = sublist0[0:2]
-    else: 
-        sublist0 = []
-    if len_sublist1 >= 2:
-        sublist1 = sublist1[1:4]
+    sub1= list_of_lists_to_modify[0]
+    sub2= list_of_lists_to_modify [1]
+    sub3= list_of_lists_to_modify [2]
+    
+    if len(sub1)>0:
+        sub1=sub1[0:2]
+    
     else:
-        sublist1 = []
-    if len_sublist2 >= 0:
-        sublist2 = sublist2[-2:]
+        sub1=[]
+    
+    if len(sub2)>= 2 :
+        sub2=sub2[1:4]
+    
+    else:
+        sub2=[]
+    
+    if len(sub3) > 0:
+    sub3=sub3[-2:]
+    
+    else:
+        sub3 = []
+
     return list_of_lists_to_modify
