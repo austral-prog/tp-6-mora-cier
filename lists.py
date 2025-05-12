@@ -46,22 +46,25 @@ def check_lists(list_to_compare1, list_to_compare2):
 
 
 def list_of_lists(list_of_lists_to_modify):
-    len_list = len(list_of_lists_to_modify)
-    if len_list >= 3:
-        list_of_lists_to_modify[0] = list_of_lists_to_modify[0][:2]
-        list_of_lists_to_modify[1] = list_of_lists_to_modify[1][1:4]
-        list_of_lists_to_modify[2] = list_of_lists_to_modify[2][-2:]
-        return list_of_lists_to_modify
-    elif len_list >= 2:
-        list_of_lists_to_modify[1] = list_of_lists_to_modify[1][1]
-        return list_of_lists_to_modify
-    elif len_list >= 1:
-        list_of_lists_to_modify[1] = []
-        return list_of_lists_to_modify
+    sublist0 = list_of_lists_to_modify[0]
+    sublist1 = list_of_lists_to_modify[1]
+    sublist2 = list_of_lists_to_modify[2]
+
+    len_sublist0 = len(sublist0)
+    len_sublist1 = len(sublist1)
+    len_sublist2 = len(sublist2)
+    
+    if len_sublist0 >= 0:
+        sublist0 = sublist0[:2]
+    else: 
+        sublist0 = []
+
+    if len_sublist1 >= 2:
+        sublist1 = sublist1[1:4]
     else:
-        return list_of_lists_to_modify
-def list_of_lists(list_of_lists_to_modify):
-    list_of_lists_to_modify[0] = list_of_lists_to_modify[0][:2]
-    list_of_lists_to_modify[1] = list_of_lists_to_modify[1][1:4]
-    ist_of_lists_to_modify[2] = list_of_lists_to_modify[2][-2:]
+        sublist1 = []
+    
+    elif: len_sublist2 >= 0:
+        sublist2 = sublist2[-2:]
+    
     return list_of_lists_to_modify
