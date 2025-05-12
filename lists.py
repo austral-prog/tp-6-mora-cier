@@ -92,4 +92,5 @@ def list_of_lists(list_of_lists_to_modify):
     else:
         sub3 = []
 
-    return list_of_lists_to_modify
+    todo=[sub1, sub2, sub3]
+    return todo
