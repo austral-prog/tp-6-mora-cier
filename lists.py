@@ -87,7 +87,7 @@ def list_of_lists(list_of_lists_to_modify):
         sub2=[]
     
     if len(sub3) > 0:
-    sub3=sub3[-2:]
+        sub3=sub3[-2:]
     
     else:
         sub3 = []
