@@ -54,7 +54,7 @@ def list_of_lists(list_of_lists_to_modify):
     len_sublist1 = len(sublist1)
     len_sublist2 = len(sublist2)
     
-    if len_sublist0 >= 0:
+    if len_sublist0 > 0:
         sublist0 = sublist0[:2]
     else: 
         sublist0 = []
@@ -64,7 +64,7 @@ def list_of_lists(list_of_lists_to_modify):
     else:
         sublist1 = []
     
-    elif: len_sublist2 >= 0:
+    elif: len_sublist2 > 0:
         sublist2 = sublist2[-2:]
     
     return list_of_lists_to_modify
